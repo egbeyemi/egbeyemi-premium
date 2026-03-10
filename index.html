@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Egbeyemi Premium</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
+<div class="overlay">
+
+<div class="container">
 
 <h1>Egbeyemi Premium</h1>
 
@@ -14,18 +22,39 @@
 
 <button onclick="openForm()">Activate Spotify Premium</button>
 
-<div id="formSection" style="display:none;">
+<div id="formSection" style="display:none; margin-top:20px;">
 
-<input id="username" placeholder="Spotify Username">
+<input type="text" id="username" placeholder="Enter Spotify Username" required>
 
-<input id="whatsapp" placeholder="WhatsApp Number">
+<input type="text" id="whatsapp" placeholder="Enter WhatsApp Number" required>
 
 <select id="plan">
-<option>1 Month — ₦700</option>
-<option>3 Months — ₦2000</option>
+
+<option value="1 Month — ₦700">1 Month — ₦700</option>
+
+<option value="3 Months — ₦2000">3 Months — ₦2000</option>
+
+<option value="6 Months — ₦3500">6 Months — ₦3500</option>
+
 </select>
 
-<button onclick="showPayment()">Order Now</button>
+<button onclick="showPayment()">Proceed to Payment</button>
+
+</div>
+
+<p style="margin-top:30px;font-size:14px;">
+Need help? Contact Customer Support on WhatsApp
+</p>
+
+<a href="https://wa.me/2349139103648" target="_blank">
+
+<button style="background:#25D366;margin-top:10px;">
+Chat Support
+</button>
+
+</a>
+
+</div>
 
 </div>
 
