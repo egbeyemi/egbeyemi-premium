@@ -1,40 +1,38 @@
 function createAccount(){
 
-let name = document.getElementById("name").value
-let whatsapp = document.getElementById("whatsapp").value
+let name=document.getElementById("name").value
+let whatsapp=document.getElementById("whatsapp").value
 
-if(name === "" || whatsapp === ""){
-alert("Please fill all fields")
-return
-}
-
-localStorage.setItem("user_name", name)
-localStorage.setItem("user_whatsapp", whatsapp)
+localStorage.setItem("name",name)
+localStorage.setItem("whatsapp",whatsapp)
 
 document.getElementById("register").style.display="none"
-document.getElementById("dashboard").style.display="block"
+document.getElementById("offer").style.display="block"
 
 }
 
-function openForm(){
+function startEnjoying(){
 
-document.getElementById("formSection").style.display="block"
+document.getElementById("offer").style.display="none"
+document.getElementById("renewal").style.display="block"
 
 }
 
-function orderPremium(){
+function continuePayment(){
 
-let username = document.getElementById("username").value
-let plan = document.getElementById("plan").value
+document.getElementById("renewal").style.display="none"
+document.getElementById("payment").style.display="block"
 
-let name = localStorage.getItem("user_name")
-let whatsapp = localStorage.getItem("user_whatsapp")
+}
 
-let message = "Hello Egbeyemi Premium,%0A%0AI want Spotify Premium.%0A%0AName: "
-+ name + "%0AWhatsApp: " + whatsapp + "%0ASpotify Username: "
-+ username + "%0APlan: " + plan + "%0A%0AI will send payment proof."
+function proceedPayment(){
 
-let url = "https://wa.me/2349139103648?text=" + message
+let name=localStorage.getItem("name")
+let whatsapp=localStorage.getItem("whatsapp")
+
+let message="Hello Egbeyemi Premium,%0A%0AI want Spotify Premium.%0A%0AName: "+name+"%0AWhatsApp: "+whatsapp+"%0ATotal Payment: ₦708"
+
+let url="https://wa.me/2349139103648?text="+message
 
 window.open(url,"_blank")
 
