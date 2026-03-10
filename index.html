@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Egbeyemi Premium</title>
 
 <link rel="stylesheet" href="style.css">
@@ -18,15 +20,39 @@
 
 <h1>Egbeyemi Premium</h1>
 
-<p>Cheap Spotify Premium Slots</p>
+<p>Affordable Spotify Premium Slots</p>
+
+<!-- REGISTER SECTION -->
+
+<div id="register">
+
+<h2>Create Account</h2>
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<input type="text" id="whatsapp" placeholder="Enter your WhatsApp number">
+
+<button onclick="createAccount()">Create Account</button>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div id="dashboard" style="display:none;">
+
+<h2>Welcome 🎧</h2>
+
+<p>You can now activate Spotify Premium</p>
 
 <button onclick="openForm()">Activate Spotify Premium</button>
 
+</div>
+
+<!-- ORDER FORM -->
+
 <div id="formSection" style="display:none; margin-top:20px;">
 
-<input type="text" id="username" placeholder="Enter Spotify Username" required>
-
-<input type="text" id="whatsapp" placeholder="Enter WhatsApp Number" required>
+<input type="text" id="username" placeholder="Spotify Username">
 
 <select id="plan">
 
@@ -38,19 +64,17 @@
 
 </select>
 
-<button onclick="showPayment()">Proceed to Payment</button>
+<button onclick="orderPremium()">Proceed to Payment</button>
 
 </div>
 
 <p style="margin-top:30px;font-size:14px;">
-Need help? Contact Customer Support on WhatsApp
+Need help? Contact support
 </p>
 
-<a href="https://wa.me/2349139103648" target="_blank">
+<a href="https://wa.me/2349139103648">
 
-<button style="background:#25D366;margin-top:10px;">
-Chat Support
-</button>
+<button style="background:#25D366;">Chat Support</button>
 
 </a>
 
